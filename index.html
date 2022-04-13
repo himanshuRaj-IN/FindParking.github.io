@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Parking</title>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <div id="headerBox">
+        <div id="leftheader">
+            FIND PARKING
+        </div>
+        <div id="rightheader">
+            <div id="username">Himanshu Raj</div>
+            <div id="usericon"></div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="leftDiv">
+
+            <div id="locationimg">
+                <img src="img/location.png" alt="gps" width="100" height="100">
+            </div>
+
+            <div id="searchplaceholder">
+                <input placeholder="Search...">
+            </div>
+            <div id="gpspermission">
+                <input type="checkbox" id="checkbox1" name="location" value="sbl">
+                <label for="location">Use  my  GPS  location</label>
+            </div>
+            <div id="btndiv" >
+                <button type="button" class="btn-grad" id="findparkingbtn" onclick="test()">Find Parking Space</button>
+            </div>
+
+        </div>
+        <div id="rightDiv">Result will display here </div>
+    </div>
+    <footer>
+        <p style="margin: 0; padding:4px; float: right;">Developed &nbsp; By &nbsp; &nbsp; @ &nbsp; Himanshu Raj &nbsp;
+            & &nbsp; Team &nbsp; &nbsp; &nbsp; &nbsp;</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
