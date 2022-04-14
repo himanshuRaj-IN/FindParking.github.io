@@ -1,26 +1,17 @@
 function test(){
-    // document.getElementById("rightDiv").textContent;
-    // console.log(document.getElementById("rightDiv").textContent);
-    // This 
-    const  response1 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp01/data/retain")
-    const  response2 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp02/data/retain")
-    const  response3 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp03/data/retain")
-    const  response4 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp04/data/retain")
-    const  response5 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp05/data/retain")
-    console.log(response1)
-    console.log(response2)
-    console.log(response3)
-    console.log(response4)
-    console.log(response5)
-
-    const str = 
-
-    valueArray = ["Himanshu Raj you are doing gread work how are you doign today", "Priyanshu Raj", "Anuj Kumar","ramses","This is the last item of the list "];
-    document.getElementById("rightDiv").innerHTML = `<div id="div1"> ${response1} </div>
-                                                     <div id="div2"> ${response2} </div>
-                                                     <div id="div3"> ${response3} </div>
-                                                     <div id="div4"> ${response4} </div>
-                                                     <div id="div5"> ${response5} </div>`
+    // const  response1 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp01/data/retain")
+    // let temp = response1.replaceAll(",","")
+    // if (parseInt(response1)>50) {
+    //     console.log("Available")
+    // }
+   
+    // const  response2 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp02/data/retain")
+    // const  response3 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp03/data/retain")
+    // const  response4 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp04/data/retain")
+    // const  response5 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp05/data/retain")  
+ 
+    let str = responseGenerator();
+    document.getElementById("rightDiv").innerHTML = str
   
 }
 
@@ -31,4 +22,29 @@ function httpGet(theUrl)
     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
+}
+
+function checkAvailability(GetURL){
+    const  response = httpGet(GetURL)
+    let temp = response.replaceAll(",","")
+    // console.log(temp)
+    if (parseInt(response)>50) {
+        return true
+    }
+    return false
+}
+
+function responseGenerator(){
+    let rStr = ""
+    for (let index = 1; index < 6; index++) {
+        let URL = "https://io.adafruit.com/api/v2/Himanshu00/feeds/spp0"+index+"/data/retain"
+        // console.log(checkAvailability(URL))
+        if(checkAvailability(URL) == true){
+            rStr = rStr+"<div id=div"+index+"> SPP0"+index+" STATUS : Available </div>"
+           
+        }
+        
+    }
+    // console.log(rStr)
+    return rStr
 }

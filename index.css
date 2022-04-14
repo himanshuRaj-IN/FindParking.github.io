@@ -112,7 +112,7 @@ footer{
 }
 
 #div1{
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-name: slidein;
     animation-iteration-count: 1;
     color: aliceblue;
