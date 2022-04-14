@@ -39,12 +39,16 @@ function responseGenerator(){
     for (let index = 1; index < 6; index++) {
         let URL = "https://io.adafruit.com/api/v2/Himanshu00/feeds/spp0"+index+"/data/retain"
         // console.log(checkAvailability(URL))
+        buttonStr = '<button type= "button" class="btn-grad" id="BookButton" onclick="BookSpot()" style="height: 35px;">Book</button>'
         if(checkAvailability(URL) == true){
-            rStr = rStr+"<div id=div"+index+"> SPP0"+index+" STATUS : Available </div>"
+            rStr = rStr+"<div id=div"+index+"> SPP0"+index+" STATUS : Available  </div>"
            
         }
         
     }
     // console.log(rStr)
     return rStr
+}
+function BookSpot(){
+    console.log("booked")
 }
