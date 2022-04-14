@@ -19,19 +19,18 @@
 
     <div id="content">
         <div id = "search">
-                <input list="browsers" name="browser" placeholder="Search . . . " style="height: 30px;">
-                <datalist id="browsers" >
-                  <option value="Internet Explorer">
-                  <option value="Firefox">
-                  <option value="Chrome">
-                  <option value="Opera">
-                  <option value="Safari">
+                <input list="parkinglots" id="location" placeholder="Search . . . " style="height: 30px;">
+                <datalist id="parkinglots" >
+                  <option value="ABCParking"></option>
+                  <option value="XYZParking">
+                  <option value="DEFParkig">
                 </datalist>
                 
-                <button type="button" class="btn-grad" id="findparkingbtn" onclick="test()" style="height: 35px;">Find Parking</button>
+                <button type="button" class="button" id="findparkingbtn" onclick="test()">Find Parking</button>
         </div>  
-        <div id="resultbox" >
-        <div id="searchResult">Result will display here </div>
+        <div id="searchResultTiltle" class="SearchResultTitle">Know nearby Parking</div>
+        <div id="resultbox" > 
+        <div id="searchResult"></div>
         </div> 
     </div>
     <footer>

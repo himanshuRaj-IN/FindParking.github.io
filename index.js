@@ -1,16 +1,7 @@
 function test(){
-    // const  response1 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp01/data/retain")
-    // let temp = response1.replaceAll(",","")
-    // if (parseInt(response1)>50) {
-    //     console.log("Available")
-    // }
-   
-    // const  response2 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp02/data/retain")
-    // const  response3 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp03/data/retain")
-    // const  response4 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp04/data/retain")
-    // const  response5 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp05/data/retain")  
- 
+    const value = document.querySelector('#location').value;
     let str = responseGenerator();
+    document.getElementById("searchResultTiltle").innerHTML = '<div class="SearchResultTitle">Spots Available in '+value+'</div>'
     document.getElementById("searchResult").innerHTML = str
   
 }
@@ -41,7 +32,7 @@ function responseGenerator(){
         // console.log(checkAvailability(URL))
         buttonStr = '<button type= "button" class="btn-grad" id="BookButton" onclick="BookSpot()" style="height: 35px;">Book</button>'
         if(checkAvailability(URL) == true){
-            rStr = rStr+"<div id=div"+index+"> SPP0"+index+" STATUS : Available  </div>"
+            rStr = rStr+"<div id=div"+index+"> SPP0"+index+" STATUS : Available "+buttonStr+"</div>"
            
         }
         
@@ -51,4 +42,5 @@ function responseGenerator(){
 }
 function BookSpot(){
     console.log("booked")
+    alert("Hi Your booking Confirmed. You have 20 Minutes to aquire postion.")
 }
