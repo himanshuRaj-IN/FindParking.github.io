@@ -14,41 +14,22 @@
 <body>
 
     <div id="headerBox">
-        <div id="leftheader">
             FIND PARKING
-        </div>
-        <div id="rightheader">
-            <div id="username">Himanshu Raj</div>
-            <div id="usericon"></div>
-        </div>
     </div>
 
     <div id="content">
-        <div id="leftDiv">
-
-            <div id="locationimg">
-            </div>
-
-            <div id="searchplaceholder">
-                <input list="browsers" name="browser">
-                <datalist id="browsers">
-                    <option value="Internet Explorer">
-                    <option value="Firefox">
-                    <option value="Chrome">
-                    <option value="Opera">
-                    <option value="Safari">
+        <div id = "search">
+                <input list="browsers" name="browser" placeholder="Search . . . " style="height: 30px;">
+                <datalist id="browsers" >
+                  <option value="Internet Explorer">
+                  <option value="Firefox">
+                  <option value="Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
                 </datalist>
-            </div>
-            <div id="gpspermission">
-                <input type="checkbox" id="checkbox1" name="location" value="sbl">
-                <label for="location">Use my GPS location</label>
-            </div>
-            <div id="btndiv">
-                <button type="button" class="btn-grad" id="findparkingbtn" onclick="test()">Find Parking Space</button>
-            </div>
-
-        </div>
-        <div id="rightDiv">Result will display here </div>
+                <button type="button" class="btn-grad" id="findparkingbtn" onclick="test()" style="height: 35px;">Find</button>
+        </div>   
+        <div id="searchResult">Result will display here </div>
     </div>
     <footer>
         <p style="margin: 0; padding:4px; float: right;">Developed &nbsp; By &nbsp; &nbsp; @ &nbsp; Himanshu Raj &nbsp;

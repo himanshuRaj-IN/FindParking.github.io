@@ -11,7 +11,7 @@ function test(){
     // const  response5 = httpGet("https://io.adafruit.com/api/v2/Himanshu00/feeds/spp05/data/retain")  
  
     let str = responseGenerator();
-    document.getElementById("rightDiv").innerHTML = str
+    document.getElementById("searchResult").innerHTML = str
   
 }
 
