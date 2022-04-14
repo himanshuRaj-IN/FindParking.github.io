@@ -1,9 +1,14 @@
 function test(){
     const value = document.querySelector('#location').value;
-    let str = responseGenerator();
+    
+    if(value == "ABCParking"){
     document.getElementById("searchResultTiltle").innerHTML = '<div class="SearchResultTitle">Spots Available in '+value+'</div>'
+    let str = responseGenerator("Himanshu00");
     document.getElementById("searchResult").innerHTML = str
-  
+    }else{
+        document.getElementById("searchResultTiltle").innerHTML = '<div class="SearchResultTitle">Spots Available in '+value+'</div>'
+        document.getElementById("searchResult").innerHTML = "Opps Not Found !! <br> Try other nearby Location"
+    }
 }
 
 
@@ -25,12 +30,13 @@ function checkAvailability(GetURL){
     return false
 }
 
-function responseGenerator(){
+function responseGenerator(username){
     let rStr = ""
     for (let index = 1; index < 6; index++) {
-        let URL = "https://io.adafruit.com/api/v2/Himanshu00/feeds/spp0"+index+"/data/retain"
+        let URL = "https://io.adafruit.com/api/v2/"+username+"/feeds/spp0"+index+"/data/retain"
         // console.log(checkAvailability(URL))
-        buttonStr = '<button type= "button" class="btn-grad" id="BookButton" onclick="BookSpot()" style="height: 35px;">Book</button>'
+      
+        buttonStr = '<button type= "button"  class ="BookButton"id="BookButton'+index+'" onclick="BookSpot()">Book</button>'
         if(checkAvailability(URL) == true){
             rStr = rStr+"<div id=div"+index+"> SPP0"+index+" STATUS : Available "+buttonStr+"</div>"
            
@@ -40,7 +46,8 @@ function responseGenerator(){
     // console.log(rStr)
     return rStr
 }
-function BookSpot(){
+function BookSpot(){ 
+    alert("Hi Your booking Confirmed. Please aquire spot in next 20 Minutes.")
+    document.getElementsByClassName("BookButton1").disabled = true;
     console.log("booked")
-    alert("Hi Your booking Confirmed. You have 20 Minutes to aquire postion.")
 }
