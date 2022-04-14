@@ -5,8 +5,7 @@ html,body{
     background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 }
 #headerBox{
-    border-right: double;
-    border-color: #f6f3f7 ;
+  
     text-align: center;
     position: relative;
     padding: 10px 10px 0px 0px;
@@ -15,20 +14,31 @@ html,body{
     /* height: 50px; */
     font-family: 'ZCOOL QingKe HuangYou', cursive;
     color: rgb(255, 255, 255);
+ 
 }
 #content{
-    display: block;
-    display: inline-block;
-    padding: 20px 20px 20px 20px;    
+    text-align: center;
+    position: relative;
+    margin: 10px;
+
 }  
 
 #search{
-    align-items: center;
-    float: left;
+    align-items: center; 
+    padding: 20px 20px 20px 20px; 
+}
+#resultbox{
+    margin-right: 20px;
+    margin-left: 20px;
+    border-style: double;
+    border-color: #FFD700;
+    border-radius: 20px;
+
+    
 }
 #searchResult{
     align-items: center;
-    float: left;
+    
 }
 footer{
     position: relative;
@@ -49,6 +59,7 @@ footer{
     color: aliceblue;
     height: 20%;
     text-align: center;
+   
     
 }
 #div2{
@@ -58,6 +69,7 @@ footer{
     color: aliceblue;
     height: 20%;
     text-align: center;
+   
 }
 #div3{
     animation-duration: 2s;
@@ -95,4 +107,3 @@ footer{
       width: 100%;
     }
   }
-
