@@ -48,6 +48,5 @@ function responseGenerator(username){
 }
 function BookSpot(){ 
     alert("Hi Your booking Confirmed. Please aquire spot in next 20 Minutes.")
-    document.getElementsByClassName("BookButton1").disabled = true;
     console.log("booked")
 }
