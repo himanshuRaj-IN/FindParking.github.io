@@ -17,7 +17,7 @@
 #define IO_SERVER       "io.adafruit.com"
 #define IO_SERVERPORT    1883
 #define IO_USERNAME  "Himanshu00"
-#define IO_KEY       "aio_rhKB89bYw4RFfmD2QA0qVT6JPquk"
+#define IO_KEY       ""
 WiFiClient client;
 Adafruit_MQTT_Client mqtt(&client, IO_SERVER, IO_SERVERPORT, IO_USERNAME, IO_KEY);
 Adafruit_MQTT_Publish SPS_Data = Adafruit_MQTT_Publish(&mqtt, IO_USERNAME "/feeds/spp01");
