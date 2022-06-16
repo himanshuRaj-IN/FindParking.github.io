@@ -5,7 +5,9 @@ Ongoing rapid urbanization has potentially improved the well-being of our societ
 #### The main objective of our project is to tackle the above-mentioned problems, by designing and implementing a system where users can find the perfect parking spot with a single click on a Web application. Our project is “ IoT Based Smart Parking System”  in this project we place a small IoT device at each parking spot. Every IoT device updates data to the IoT cloud whether this position is occupied or not by detecting the presence of vehicles over it. For the user side, we provide a web application that fetches all data via API  call to the IoT cloud and runs an algorithm to provide the best and nearest parking spot to the user. For future extensions of this project, users are able to book spots in advance. These all features combined together provide a smooth motoring experience in cities and reduce traffic congestion which creates due to not finding parking spots.
 
 # Project Snapshot
+![Project Snapshot](/Other%20Resource/capture.PNG)
 
+## Demo Video
+[![YouTube Icon](/Other%20Resource/download.png)](https://www.youtube.com/watch?v=BrjPBv5xLAc)
 
-## Demo
-https://www.youtube.com/watch?v=BrjPBv5xLAc
+## [Download Project Report ](/Other%20Resource/IoT%20Based%20Smart%20Parking%20System%20Report.docx)
